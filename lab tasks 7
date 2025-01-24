@@ -1,0 +1,36 @@
+#include<iostream> 
+using namespace std; 
+int main() { 
+//*using nested if-else**/ 
+//taking inputs 
+int a, b, c; 
+cout << "enter number 1 \n";cin >> a; 
+cout << "enter number 2 \n";cin >> b; 
+cout << "enter number 3 \n";cin >> c; 
+//determining the largest number 
+if (a > b) { 
+if (a > c) { 
+cout << "number 1 is the largest number \n"; 
+} 
+else if (c > a) { 
+cout << "number 3 is the largest number \n"; 
+} 
+} 
+else if (b > a) { 
+if (b > c) { 
+cout << "number 2 is the largest number \n"; 
+} 
+else if (c > b) { 
+cout << "number 3 is the largest number \n"; 
+} 
+} 
+else if (a > c) { 
+if (a > b) { 
+cout << "number 1 is the largest number"; 
+} 
+else if (b > a) { 
+cout << "number 3 is the largest number"; 
+} 
+} 
+return 0; 
+} 
