@@ -1,0 +1,36 @@
+#include<iostream> 
+using namespace std; 
+int main() { 
+float percentage, familyIncome; 
+string extracurricular; 
+// Input the percentage of marks 
+cout << "Enter your percentage of marks: "; 
+cin >> percentage; 
+// Input the family income 
+cout << "Enter your family income (in Rs.): "; 
+cin >> familyIncome; 
+// Input extracurricular activities participation 
+cout << "Do you participate in extracurricular activities? (yes/no): "; 
+cin >> extracurricular; 
+// Determine scholarship eligibility using nested if-else 
+if (percentage >= 80) { 
+if (percentage > 90) { 
+if (familyIncome < 50000) { 
+cout << "Full Scholarship awarded." << endl; 
+} 
+else if (familyIncome >= 50000 && familyIncome <= 100000) { 
+cout << "Half Scholarship awarded." << endl; 
+} 
+else { 
+cout << "No Scholarship awarded." << endl; 
+} 
+} 
+else { 
+cout << "No Scholarship awarded." << endl; 
+} 
+} 
+else { 
+cout << "No Scholarship awarded." << endl; 
+} 
+return 0; 
+} 
