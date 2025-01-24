@@ -1,0 +1,21 @@
+#include <iostream> 
+using namespace std; 
+int main() { 
+/* enter scores and percentage*/ 
+float mathScore, englishScore, overallPercentage; 
+cout << "Enter Math score: "; 
+cin >> mathScore; 
+cout << "Enter English score: "; 
+cin >> englishScore; 
+cout << "Enter overall percentage: "; 
+cin >> overallPercentage; 
+if ((mathScore >= 85 && englishScore >= 80) && (overallPercentage > 90)) { 
+/*  if eligible for scolarship*/ 
+cout << "Eligible for scholarship" << endl; 
+} 
+else { 
+/* if not*/ 
+cout << "Not eligible" << endl; 
+} 
+return 0; 
+} 
