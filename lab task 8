@@ -1,0 +1,43 @@
+#include <iostream> 
+using namespace std; 
+int main() { 
+int choice, quantity; 
+double total_cost = 0; 
+cout << "Welcome to the Grocery Store\n"; 
+cout << "Menu:\n"; 
+cout << "1. Apples   - $100 per kg\n"; 
+cout << "2. Bananas  - $50 per dozen\n"; 
+cout << "3. Oranges  - $70 per kg\n"; 
+cout << "4. Milk     - $60 per liter\n"; 
+cout << "5. Bread    - $40 per loaf\n"; 
+while (true) { 
+cout << "\nEnter item number to buy (1-5) or 0 to checkout: "; 
+cin >> choice; 
+if (choice == 0) break; // Exit loop on 0 
+cout << "Enter quantity: "; 
+cin >> quantity; 
+switch (choice) { 
+case 1: total_cost += 100 * quantity; break; // Apples 
+case 2: total_cost += 50 * quantity; break;  // Bananas 
+case 3: total_cost += 70 * quantity; break;  // Oranges 
+case 4: total_cost += 60 * quantity; break;  // Milk 
+case 5: total_cost += 40 * quantity; break;  // Bread 
+default:  
+cout << "Invalid choice. Try again.\n";  
+break; 
+} 
+} 
+// Apply discount 
+double discount = 0; 
+if (total_cost > 10000) discount = 0.20; 
+else if (total_cost > 5000) discount = 0.10; 
+else if (total_cost >= 5000) discount = 0.05; 
+double discount_amount = total_cost * discount; 
+double final_amount = total_cost - discount_amount; 
+// Output results 
+cout << "\nTotal Cost: $" << total_cost; 
+cout << "\nDiscount: $" << discount_amount; 
+cout << "\nFinal Amount to Pay: $" << final_amount; 
+cout << "\nThank you for shopping with us!\n"; 
+return 0; 
+} 
